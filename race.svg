@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,6 +54,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#ff9955;fill-rule:evenodd;stroke:#000000;stroke-width:1.78258026px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3355"
+       width="1067.8507"
+       height="742.82855"
+       x="-9.4579153"
+       y="311.60458" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 1045.7143,451.86221 0,0"
@@ -86,28 +93,28 @@
     <ellipse
        style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:1.63571px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="path3405"
-       cx="94.798119"
+       cx="78.590057"
        cy="407.24741"
        rx="42.772202"
        ry="52.621353" />
     <ellipse
        style="fill:#ffff00;fill-rule:evenodd;stroke:#000000;stroke-width:1.63571px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="path3405-5"
-       cx="86.180099"
+       cx="78.590057"
        cy="564.82904"
        rx="42.772202"
        ry="52.621353" />
     <ellipse
        style="fill:#000080;fill-rule:evenodd;stroke:#000000;stroke-width:1.63571px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="path3405-5-1"
-       cx="88.642395"
+       cx="78.590057"
        cy="742.11383"
        rx="42.772202"
        ry="52.621353" />
     <ellipse
        style="fill:#aa4400;fill-rule:evenodd;stroke:#000000;stroke-width:1.63571px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="path3405-5-9"
-       cx="86.180107"
+       cx="78.590057"
        cy="946.48383"
        rx="42.772202"
        ry="52.621353" />

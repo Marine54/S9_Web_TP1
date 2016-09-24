@@ -12,3 +12,22 @@ footer {
 	position: absolute;
 	bottom: 0;
 }
+
+#svg2 {
+	width: 500px;
+	height: 300px;
+}
+
+/* Couleur des vaches */
+#pimprenelle {
+	color: red;
+}
+#margerite {
+	color: #FFAD00;
+} 
+#paquerette {
+	color: blue;
+}
+#paulette {
+	color: saddlebrown;
+}
