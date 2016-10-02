@@ -24,10 +24,44 @@ function verification() {
     $("#start").prop("disabled", !peutJouer);
 }
 
+
+
+function startRace() {
+    // Toutes les 50ms on déplace les vaches
+    console.log("Démarrage de la course");
+    mouvement();
+}
+
+function mouvement() {
+    // Faire bouger les 4 vaches
+    var ellipses = document.getElementsByTagName("ellipse");
+    for(i=0;i<ellipses.length;i++) {
+        bouge(ellipses[i].id);
+    }
+}
+
+function bouge(idVache) {
+    // Détermination de la distance
+    var distance = determinerDistance();
+    
+    // Bouge
+    faireBougerUneVache(idVache, distance);
+}
+
+function determinerDistance() {
+    // Random entre 5 et 10
+    var distance = Math.floor((Math.random() * 5) + 5);
+    
+    return distance;
+}
+
+function faireBougerUneVache(id, distance) {
+    console.log("Déplacement de la vache " + id + " de " + distance + "px");
+    $("#"+id).css({"transform":"translateX("+distance+"px)"});
+}
+
+/*
 $( document ).ready(function() {
     verification();
 });
-
-function countDown() {
-    
-}
+*/
