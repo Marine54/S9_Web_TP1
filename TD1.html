@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Cow race</title>
-  <link rel="stylesheet" href="td1.css">
+  <link rel="stylesheet" href="css/td1.css">
+  
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/td1.js"></script>
+
 </head>
 
 <body>
@@ -15,10 +19,13 @@
 	</header>
 	
  <aside>
-	 <p>Remaining credits of the player : </p>
+	 <p>
+     Remaining credits of the player : 
+     <span id="remaining_credit">100</span>
+   </p>
 
  	<form>
-  		<label>Bet amount : </label><input type="number" name="choice"></br><br/>
+  		<label>Bet amount : </label><input type="number" id="mise" value="10" name="choice"></br><br/>
   		
 		<label>Which cow do you want to play with ?</label><br/>
 		<input type="radio" name="vache" value="Pimprenelle"><span id="pimprenelle">Pimprenelle</span><br> 
@@ -26,10 +33,15 @@
 		<input type="radio" name="vache" value="Pâquerette"><span id="paquerette">Pâquerette</span><br>
 		<input type="radio" name="vache" value="Paulette"><span id="paulette">Paulette</span><br><br/>
 	
-		<input type="checkbox" name="drug" value="EPO">EPO<br><br/>
+		<input type="checkbox" id="drug" name="drug" value="EPO">EPO<br><br/>
 
-		<input type="button" name="start" value="start the race">
+    <input type="button" name="verif" onclick="verification()" value="Vérifier">
+		<input type="button" name="start" id="start" onclick="countDown()" value="start the race">
   	</form>
+    
+    <p id="countdown">
+      
+    </p> 
  </aside>
 
  <!--<img src="race.svg" alt="Race field" id="svgRace" />-->
