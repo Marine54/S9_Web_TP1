@@ -33,10 +33,20 @@ function verification() {
     $("#start").prop("disabled", !peutJouer);
 }
 
-function startTimer() {
-    vacheSelectionne();
+function initStart() {
+    // On désélectionne le boutonn start pour éviter qu'il clique plusieurs fois
+    $("#start").prop("disabled", true);
     
-     // Timer
+    // On enlève sa mise
+    var mise = parseInt($("#mise").prop("value"));
+    var credits = parseInt($("#remaining_credit").html());
+    $("#remaining_credit").html(credits-mise);
+    
+    vacheSelectionne();
+}
+
+function startTimer() {
+    // Timer
     var timer =  setInterval(function() {
         var content = $("#countdown").html();
         if(content === "") {
