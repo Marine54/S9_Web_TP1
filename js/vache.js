@@ -1,4 +1,13 @@
-console.log("bonjour");
+var vache;
+function vacheSelectionne() {
+    var checkboxes = $('.checkvache');
+    for(i=0;i<checkboxes.length;i++) {
+        if(checkboxes[i].checked) {
+            vache = checkboxes[i].defaultValue;
+            break;
+        }
+    }
+}
 
 function verification() {
     var drugPrice = 30;
@@ -24,12 +33,36 @@ function verification() {
     $("#start").prop("disabled", !peutJouer);
 }
 
+function startTimer() {
+    vacheSelectionne();
+    
+     // Timer
+    var timer =  setInterval(function() {
+        var content = $("#countdown").html();
+        if(content === "") {
+            $("#countdown").html("3");
+        } else {
+            var contentNumber = parseInt(content);
+            var newContentNumber = contentNumber - 1;
+            
+            if(newContentNumber === 0) {
+                $("#countdown").html("GO");
+                clearInterval(timer);
+                startRace();
+            } else {
+                $("#countdown").html(newContentNumber);
+            }
+            
+        }
+    }, 1000);
+}
 
-
+var intervalMove;
 function startRace() {
     // Toutes les 50ms on déplace les vaches
     console.log("Démarrage de la course");
-    mouvement();
+    
+    intervalMove = setInterval(function(){ mouvement(); }, 50);
 }
 
 function mouvement() {
@@ -56,8 +89,17 @@ function determinerDistance() {
 }
 
 function faireBougerUneVache(id, distance) {
-    console.log("Déplacement de la vache " + id + " de " + distance + "px");
-    $("#"+id).css({"transform":"translateX("+distance+"px)"});
+    //console.log("Déplacement de la vache " + id + " de " + distance + "px");
+    var valueX = parseInt($("#"+id).attr("cx")) + distance;
+    
+    if(valueX > 910) {
+       console.log(id + " a gagné ! ");
+        if(id === vache.toLowerCase()) {
+            console.log("C'est ta vache qui a gagné ;) ");
+        }
+        clearInterval(intervalMove);
+    }
+    $("#"+id).attr("cx", valueX);
 }
 
 /*

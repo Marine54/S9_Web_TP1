@@ -18,16 +18,22 @@ footer {
 	height: 300px;
 }
 
+#countdown {
+    margin-left: 50px;
+    font-size: 32px;
+    color: red;
+}
+
 /* Couleur des vaches */
-#pimprenelle {
+#span_pimprenelle {
 	color: red;
 }
-#margerite {
+#span_margerite {
 	color: #FFAD00;
 } 
-#paquerette {
+#span_paquerette {
 	color: blue;
 }
-#paulette {
+#span_paulette {
 	color: saddlebrown;
 }
