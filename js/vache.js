@@ -1,4 +1,6 @@
 var vache;
+var bet; 
+
 function vacheSelectionne() {
     var checkboxes = $('.checkvache');
     for(i=0;i<checkboxes.length;i++) {
@@ -43,6 +45,7 @@ function initStart() {
     $("#remaining_credit").html(credits-mise);
     
     vacheSelectionne();
+    bet = mise;
     
     startTimer();
 }
@@ -103,15 +106,20 @@ function determinerDistance() {
 function faireBougerUneVache(id, distance) {
     //console.log("Déplacement de la vache " + id + " de " + distance + "px");
     var valueX = parseInt($("#"+id).attr("cx")) + distance;
+    $("#"+id).attr("cx", valueX);
     
     if(valueX > 910) {
        console.log(id + " a gagné ! ");
+       $("#results").html(id + " a gagné !");
         if(id === vache.toLowerCase()) {
-            console.log("C'est ta vache qui a gagné ;) ");
+            var newText = $("#results").html() + "<br/>C'est ta vache qui a gagné ;) ";
+            $("#results").html(newText);
+            
+            // On redonne des crédits au joueur
+            
         }
         clearInterval(intervalMove);
-    }
-    $("#"+id).attr("cx", valueX);
+    } 
 }
 
 /*
