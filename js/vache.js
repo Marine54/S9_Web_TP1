@@ -43,6 +43,8 @@ function initStart() {
     $("#remaining_credit").html(credits-mise);
     
     vacheSelectionne();
+    
+    startTimer();
 }
 
 function startTimer() {
