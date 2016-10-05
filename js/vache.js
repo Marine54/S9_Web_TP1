@@ -29,7 +29,7 @@ function initStart() {
     if (verification()) {
         // On désélectionne le boutonn start pour éviter qu'il clique plusieurs fois
         $("#start").prop("disabled", true);
-
+start
         // On enlève sa mise
         var mise = parseInt($("#mise").prop("value"));
         var credits = parseInt($("#remaining_credit").html());
